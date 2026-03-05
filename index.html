@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Glamour Apollo Hotel Webuye, Kenya - online booking, gallery, services, and restaurant menu">
+<title>Glamour Apollo Hotel</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', sans-serif;}
+body {background:#f5f5f5; color:#333;}
+header {position:relative; height:400px; background:url('https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; color:white; text-shadow:2px 2px 8px rgba(0,0,0,0.6);}
+header h1 {font-size:3em; background:rgba(0,0,0,0.4); padding:12px 24px; border-radius:10px;}
+.container {max-width:1200px; margin:auto; padding:20px;}
+.booking {background:rgba(0,0,0,0.5); padding:22px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); margin-top:-80px; position:relative; color:white;}
+.booking h2 {margin-bottom:14px;}
+.booking input, .booking select, .booking button {padding:10px; width:100%; max-width:260px; margin:6px 0; border-radius:5px; border:none;}
+.booking button {background:#25D366; color:white; cursor:pointer;}
+.booking button:hover {background:#1ebe57;}
+.gallery {display:flex; overflow-x:auto; gap:10px; margin-top:40px;}
+.gallery img {width:300px; height:200px; object-fit:cover; border-radius:10px;}
+.room-price {margin:10px 0; font-weight:bold;}
+.whatsapp-btn {position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:0 2px 5px rgba(0,0,0,0.3);}
+#restaurant {padding:30px; background:#fff; border-radius:10px; margin-top:40px;}
+#restaurant h2 {font-size:2em; margin-bottom:15px; text-align:center;}
+#restaurant img {width:350px; height:auto; border-radius:10px; object-fit:cover;}
+#restaurant ul {font-size:1.1em; line-height:1.5; list-style-type:none; padding-left:20px;}
+#restaurant p {margin-top:20px; font-size:1.1em; line-height:1.5;}
+#services {padding:30px; background:#fff; border-radius:10px; margin-top:40px;}
+#services h2 {font-size:2em; margin-bottom:15px; text-align:center;}
+@media(max-width:768px) {
+  .gallery{flex-direction:column; align-items:center;}
+  .gallery img{width:90%;}
+  .booking input, .booking select, .booking button{max-width:100%;}
+  #restaurant img{width:90%; margin-bottom:15px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Glamour Apollo Hotel</h1>
+</header>
+
+<div class="container">
+
+<!-- Booking Section -->
+<section class="booking">
+<h2>Book Your Stay</h2>
+<label>Check-in:</label>
+<input type="date" id="checkin">
+<label>Check-out:</label>
+<input type="date" id="checkout">
+<label>Guests:</label>
+<select id="guests">
+<option value="1">1 Guest</option>
+<option value="2" selected>2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+</select>
+<label>Room Type:</label>
+<select id="roomType">
+<option value="Standard">Standard - KES 3500</option>
+<option value="Deluxe">Deluxe - KES 5000</option>
+<option value="Suite">Suite - KES 8000</option>
+</select>
+<p class="room-price">Price: <span id="price">5000</span> KES</p>
+<button id="bookBtn">Book Now</button>
+<p id="confirmation" style="margin-top:10px;"></p>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery">
+<img src="https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1_2.jpg" alt="Hotel Exterior">
+<img src="https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1_3.jpg" alt="Dining Area">
+<img src="https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1_4.jpg" alt="Hotel Room">
+<img src="https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1_5.jpg" alt="Restaurant Interior">
+</section>
+
+<!-- Restaurant Section -->
+<section id="restaurant">
+<h2>Restaurant & Dining</h2>
+<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:flex-start;">
+<img src="https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1_5.jpg" alt="Restaurant Interior">
+<img src="https://images.triptap.com/ke/bungoma-county/bungoma/glamour-apollo-hotel-webuye-t045b6d1_3.jpg" alt="Dining Area">
+</div>
+<p>Glamour Apollo Hotel offers two on-site restaurants and a bar/lounge serving <strong>African, British, and American cuisines</strong>. Meals are available for <strong>breakfast, lunch, dinner</strong>, and special dietary options like <strong>halal, vegetarian, and gluten-free</strong> are available on request. Free breakfast is served daily.</p>
+<h3>Sample Menu & Pricing (Approx.)</h3>
+<ul>
+<li>🥞 Breakfast – Full Breakfast (KES 800–1,300), Continental (KES 700–1,200)</li>
+<li>🍲 Main Courses – Grilled Chicken (KES 1,200–1,800), Beef Steak (KES 1,500–2,300), Fish Fillet (KES 1,300–1,900)</li>
+<li>🥗 Appetizers – Garden Salad (KES 450–700), Vegetable Samosas (KES 300–500)</li>
+<li>🍹 Drinks – Soft Drinks (KES 250–400), Coffee/Tea (KES 200–400), Local Beer (KES 400–800)</li>
+</ul>
+</section>
+
+<!-- Hotel Services -->
+<section id="services">
+<h2>Our Services</h2>
+<ul style="font-size:1.1em; line-height:1.6; list-style-type:none; padding-left:20px;">
+<li>✔ Restaurant & Bar/Lounge</li>
+<li>✔ Room service available</li>
+<li>✔ BBQ & outdoor dining</li>
+<li>✔ Full breakfast included daily</li>
+<li>✔ Kids’ meals and buffet options</li>
+<li>✔ Free Wi-Fi, free parking</li>
+<li>✔ Daily housekeeping</li>
+<li>✔ 24-hour front desk & concierge</li>
+<li>✔ Private check-in/out</li>
+<li>✔ Evening entertainment & events</li>
+</ul>
+</section>
+
+</div>
+
+<!-- WhatsApp Booking Button -->
+<a href="https://wa.me/254795617798?text=Hello!%20I%20want%20to%20book%20a%20room%20at%20Glamour%20Apollo%20Hotel." target="_blank" class="whatsapp-btn">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const checkin=document.getElementById('checkin');
+const checkout=document.getElementById('checkout');
+const guests=document.getElementById('guests');
+const roomType=document.getElementById('roomType');
+const priceDisplay=document.getElementById('price');
+const bookBtn=document.getElementById('bookBtn');
+const confirmation=document.getElementById('confirmation');
+const roomPrices={Standard:3500,Deluxe:5000,Suite:8000};
+
+roomType.addEventListener('change',()=>{priceDisplay.textContent=roomPrices[roomType.value];});
+
+bookBtn.addEventListener('click',()=>{
+const cIn=checkin.value;
+const cOut=checkout.value;
+const g=guests.value;
+const rType=roomType.value;
+const rPrice=roomPrices[rType];
+if(!cIn||!cOut){alert('Please select check-in and check-out dates.');return;}
+confirmation.style.color='lightgreen';
+confirmation.textContent=`Booking confirmed: ${rType} room for ${g} guest(s) from ${cIn} to ${cOut}. Total: KES ${rPrice}.`;
+const msg=`Hello! I want to book a ${rType} room at Glamour Apollo Hotel.%0ACheck-in: ${cIn}%0ACheck-out: ${cOut}%0AGuests: ${g}%0APrice: KES ${rPrice}`;
+console.log("WhatsApp backup link:", `https://wa.me/254795617798?text=${msg}`);
+});
+</script>
+
+</body>
+</html>
